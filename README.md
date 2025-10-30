@@ -2,6 +2,7 @@
 ## Predicting Health Outcomes with Logistic Regression 
 The goal is to predict a binary health outcome from the 2015 Behavioral Risk Factor Surveillance System (BRFSS) dataset.  
 We focus on data preprocessing, feature engineering, and model selection using logistic regression.
+More information about the data at https://www.cdc.gov/brfss/annual_data/annual_2015.html
 
 ## Folder Structure
 ```
@@ -40,7 +41,6 @@ Make sure the following CSV files are placed in the `dataset/` directory, that p
 - `x_train.csv`
 - `y_train.csv`
 - `x_test.csv`
-- `sample_submission.csv`
 
 (Make sure that the DATA_PATH variable in run.py and main.py is set to the path to this folder)
 
@@ -148,14 +148,9 @@ This cross-validation setup provides a robust and fair assessment of our models,
 
 Our best submission to the [AIcrowd leaderboard](https://www.aicrowd.com/challenges/epfl-machine-learning-2025) achieved the following result:
 
-- **F1-score:** `0.428` 
+- **F1-score:** `0.429` 
 - **Model:** Regularized Logistic Regression (γ=0.05, λ=1e-6)
 - **Preprocessing:** Normalization, Polynomial Expansion (degree=3), Outlier Clipping, Bias Term added
 
 This score reflects the final performance of our best pipeline, evaluated against the hidden test labels on the competition server.
-
-
-## Previous GitHub Repository
-
-We initially started this project in a personal GitHub repository before realizing it had to be submitted through GitHub Classroom. The full commit history is available in our original repository: https://github.com/JulienErblandEPFL/ML_project1
 
