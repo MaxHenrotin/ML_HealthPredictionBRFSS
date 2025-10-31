@@ -2,11 +2,12 @@
 ## Predicting Health Outcomes with Logistic Regression 
 The goal is to predict a binary health outcome from the 2015 Behavioral Risk Factor Surveillance System (BRFSS) dataset.  
 We focus on data preprocessing, feature engineering, and model selection using logistic regression.
-More information about the data at https://www.cdc.gov/brfss/annual_data/annual_2015.html
+More information about the data at https://www.cdc.gov/brfss/annual_data/annual_2015.html.
+To have a complete overview of the project and our results please read ML_project_report.pdf.
 
 ## Folder Structure
 ```
-PROJECT-1-NOCCIOLINOS/
+ML_HealthPredictionBRFSS/
 ├── dataset/
 │   ├── sample_submission.csv
 │   ├── x_test.csv
@@ -36,11 +37,13 @@ pip install -r requirements.txt
 
 ### 2. Prepare the Dataset
 
-Make sure the following CSV files are placed in the `dataset/` directory, that possibly need to be created:
+Make sure the following CSV files are placed in the `dataset/` directory, that need to be created by extracting the dataset.zip file:
 
 - `x_train.csv`
 - `y_train.csv`
 - `x_test.csv`
+- `sample_submission.csv`
+
 
 (Make sure that the DATA_PATH variable in run.py and main.py is set to the path to this folder)
 
@@ -141,6 +144,7 @@ For each fold, we find the **optimal classification threshold** that maximizes t
 We report the **mean** across all folds for:
 - F1-score
 - Accuracy
+- Prediction vector
 
 This cross-validation setup provides a robust and fair assessment of our models, and helps mitigate overfitting to a single train-test split.
 
